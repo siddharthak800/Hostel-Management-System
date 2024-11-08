@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost/SRCHNEW/index.php -->
+<html lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Hostel Management System</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="./Hostel Management System_files/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="./Hostel Management System_files/style.css" type="text/css" media="all">
+	<!-- Style-CSS -->
+	<link href="./Hostel Management System_files/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="./Hostel Management System_files/css" rel="stylesheet">
+	<link href="./Hostel Management System_files/css(1)" rel="stylesheet">
+	<link href="./Hostel Management System_files/css(2)" rel="stylesheet">
+	<link href="./Hostel Management System_files/css(3)" rel="stylesheet">
+	<link href="./Hostel Management System_files/css(4)" rel="stylesheet">
+	<!-- //Web-Fonts -->
+	<link href="./Hostel Management System_files/jquery.dataTables.min.css" rel="stylesheet">
+	<script src="./Hostel Management System_files/jquery-3.3.1.js.download"></script>	
+	<script src="./Hostel Management System_files/jquery.dataTables.min.js.download"></script>
+	<style>
+	.errclass
+	{
+		color: red;
+		padding-left: 5px;
+	}
+	</style>
+</head>
+
+<body>
+<style>
+#mmenu, #mmenu ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+#mmenu {
+width: 100%;
+border: 1px solid #222;
+background-color: #111;
+background-image: -moz-linear-gradient(#444, #111); 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111)); 
+background-image: -webkit-linear-gradient(#444, #111); 
+background-image: -o-linear-gradient(#444, #111);
+background-image: -ms-linear-gradient(#444, #111);
+background-image: linear-gradient(#444, #111);
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+-webkit-box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+}
+#mmenu:before,
+#mmenu:after {
+content: "";
+display: table;
+}
+#mmenu:after {
+clear: both;
+}
+#mmenu {
+zoom:1;
+}
+#mmenu li {
+float: left;
+border-right: 1px solid #222;
+-moz-box-shadow: 1px 0 0 #444;
+-webkit-box-shadow: 1px 0 0 #444;
+box-shadow: 1px 0 0 #444;
+position: relative;
+}
+#mmenu a {
+float: left;
+padding: 12px 30px;
+color: #999;
+text-transform: uppercase;
+font: bold 12px Arial, Helvetica;
+text-decoration: none;
+text-shadow: 0 1px 0 #000;
+}
+#mmenu li:hover > a {
+color: #fafafa;
+}
+*html #mmenu li a:hover { /* IE6 only */
+color: #fafafa;
+}
+#mmenu ul {
+margin: 20px 0 0 0;
+_margin: 0; /*IE6 only*/
+opacity: 0;
+visibility: hidden;
+position: absolute;
+top: 38px;
+left: 0;
+z-index: 9999; 
+background: #444; 
+background: -moz-linear-gradient(#444, #111);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111));
+background: -webkit-linear-gradient(#444, #111); 
+background: -o-linear-gradient(#444, #111); 
+background: -ms-linear-gradient(#444, #111); 
+background: linear-gradient(#444, #111);
+-moz-box-shadow: 0 -1px rgba(255,255,255,.3);
+-webkit-box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+box-shadow: 0 -1px 0 rgba(255,255,255,.3); 
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out; 
+} 
+#mmenu li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+}
+#mmenu ul ul {
+top: 0;
+left: 150px;
+margin: 0 0 0 20px;
+_margin: 0; /*IE6 only*/
+-moz-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+-webkit-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+box-shadow: -1px 0 0 rgba(255,255,255,.3); 
+}
+#mmenu ul li {
+float: none;
+display: block;
+border: 0;
+_line-height: 0; /*IE6 only*/
+-moz-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+-webkit-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+#mmenu ul li:last-child { 
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none; 
+}
+#mmenu ul a { 
+padding: 10px;
+width: 130px;
+_height: 10px; /*IE6 only*/
+display: block;
+white-space: nowrap;
+float: none;
+text-transform: none;
+}
+#mmenu ul a:hover {
+background-color: #0186ba;
+background-image: -moz-linear-gradient(#04acec, #0186ba); 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+background-image: -webkit-linear-gradient(#04acec, #0186ba);
+background-image: -o-linear-gradient(#04acec, #0186ba);
+background-image: -ms-linear-gradient(#04acec, #0186ba);
+background-image: linear-gradient(#04acec, #0186ba);
+}
+#mmenu ul li:first-child > a {
+-moz-border-radius: 3px 3px 0 0;
+-webkit-border-radius: 3px 3px 0 0;
+border-radius: 3px 3px 0 0;
+}
+#mmenu ul li:first-child > a:after {
+content: '';
+position: absolute;
+left: 40px;
+top: -6px;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid #444;
+}
+#mmenu ul ul li:first-child a:after {
+left: -6px;
+top: 50%;
+margin-top: -6px;
+border-left: 0; 
+border-bottom: 6px solid transparent;
+border-top: 6px solid transparent;
+border-right: 6px solid #3b3b3b;
+}
+#mmenu ul li:first-child a:hover:after {
+border-bottom-color: #04acec; 
+}
+#mmenu ul ul li:first-child a:hover:after {
+border-right-color: #0299d3; 
+border-bottom-color: transparent; 
+}
+#mmenu ul li:last-child > a {
+-moz-border-radius: 0 0 3px 3px;
+-webkit-border-radius: 0 0 3px 3px;
+border-radius: 0 0 3px 3px;
+}
+</style>
+	<div class="main-w3pvt" id="home" style="background:none;">
+		<!-- header -->
+		<header style="background-color: black;opacity: 0.5;filter: Alpha(opacity=50);">
+			<div class="container-fluid">
+				<div class="header d-md-flex justify-content-between align-items-center py-3 px-lg-3 px-2">
+					<!-- logo -->
+					<div id="logo">
+						<h1><a class="" href="http://localhost/SRCHNEW/index.php">S.R.V.Bhavana</a></h1>
+					</div>
+					<!-- //logo -->
+					<!-- nav -->
+					<div class="nav_w3ls">
+<nav>
+	<label for="drop" class="toggle">Menu</label>
+	<input type="checkbox" id="drop">
+	<ul class="menu">
+	
+		<li><a href="http://localhost/SRCHNEW/index.php" class="active">Home</a></li>
+		
+		<li class="mx-lg-4 mx-md-3 my-md-0 my-2">
+			<!-- First Tier Drop Down -->
+			<label for="drop-2" class="toggle toogle-2">Hosteller <span class="fa fa-angle-down" aria-hidden="true"></span>
+			</label>
+			<a href="http://localhost/SRCHNEW/index.php#">Hosteller <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+			<input type="checkbox" id="drop-2">
+			<ul>
+				<li><a href="http://localhost/SRCHNEW/hostellerlogin.php" class="drop-text">Login</a></li>
+				<li><a href="http://localhost/SRCHNEW/hosteller.php" class="drop-text">Register</a></li>
+			</ul>
+		</li>
+		
+		
+		<li class="mx-lg-4 mx-md-3 my-md-0 my-2">
+			<!-- First Tier Drop Down -->
+			<label for="drop-12" class="toggle toogle-2">Guest <span class="fa fa-angle-down" aria-hidden="true"></span>
+			</label>
+			<a href="http://localhost/SRCHNEW/index.php#">Guest <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+			<input type="checkbox" id="drop-12">
+			<ul>
+				<li><a href="http://localhost/SRCHNEW/guestlogin.php" class="drop-text">Login</a></li>
+				<li><a href="http://localhost/SRCHNEW/guest.php" class="drop-text">Register</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="http://localhost/SRCHNEW/displayevents.php">Events</a></li>
+		
+		<li class="ml-lg-4 ml-md-3 mt-md-0 mt-2"><a href="http://localhost/SRCHNEW/contact.php">Contact Us</a></li>
+		
+	</ul>
+</nav>
+					</div>
+					<!-- //nav -->
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<!-- banner -->
+	<div class="banner-w3pvt">
+			<object data="./Hostel Management System_files/index2.html" width="100%" height="400px" style="margin-top:73px;"></object>
+	</div>
+	<!-- //banner -->
+	
+	
+	
+	<!-- news -->
+	<section class="blog_w3ls py-5" id="news">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title text-center mb-sm-5 mb-4">
+				<h3 class="title-w3 text-bl text-center font-weight-bold">Account</h3>
+				<div class="arrw">
+					<i class="fa fa-building-o" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="row pt-4">
+				<!-- blog grid -->
+				<div class="col-lg-4 col-md-6">
+					<div class="card border-0 med-blog">
+						<div class="card-header p-0">
+							<a href="http://localhost/SRCHNEW/single.html">
+								<img class="card-img-bottom" src="./Hostel Management System_files/blog2.jpg" alt="Card image cap">
+							</a>
+						</div>
+						<div class="card-body border border-top-0 pb-5">
+							<div class="mb-3">
+								<h5 class="blog-title card-title font-weight-bold m-0">
+									<a href="http://localhost/SRCHNEW/single.html">Login</a>
+								</h5>
+							</div>
+							<a href="http://localhost/SRCHNEW/single.html" class="blog-btn">Click here</a>
+						</div>
+					</div>
+				</div>
+				<!-- //blog grid -->
+				<!-- blog grid -->
+				<div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+					<div class="card border-0 med-blog">
+						<div class="card-header p-0">
+							<a href="http://localhost/SRCHNEW/single.html">
+								<img class="card-img-bottom" src="./Hostel Management System_files/blog1.jpg" alt="Card image cap">
+							</a>
+						</div>
+						<div class="card-body border border-top-0 pb-5">
+							<div class="mb-3">
+								<h5 class="blog-title card-title font-weight-bold m-0">
+									<a href="http://localhost/SRCHNEW/single.html">Register</a>
+								</h5>
+							</div>
+							<a href="http://localhost/SRCHNEW/single.html" class="blog-btn">Click here</a>
+						</div>
+					</div>
+				</div>
+				<!-- //blog grid -->
+				<!-- blog grid -->
+				<div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+					<div class="card border-0 med-blog">
+						<div class="card-header p-0">
+							<a href="http://localhost/SRCHNEW/single.html">
+								<img class="card-img-bottom" src="./Hostel Management System_files/blog3.jpg" alt="Card image cap">
+							</a>
+						</div>
+						<div class="card-body border border-top-0 pb-5">
+							<div class="mb-3">
+								<h5 class="blog-title card-title font-weight-bold m-0">
+									<a href="http://localhost/SRCHNEW/single.html">Guest Login</a>
+								</h5>
+							</div>
+							<a href="http://localhost/SRCHNEW/single.html" class="blog-btn">Click here</a>
+						</div>
+					</div>
+				</div>
+				<!-- //blog grid -->
+			</div>
+		</div>
+	</section>
+	<!-- //blog -->
+
+
+
+	<!-- middle section -->
+	<div class="bg-colors py-5">
+		<div class="container py-md-2">
+			<h4 class="text-center font-weight-bold text-white">Are You Ready
+				<a href="http://localhost/SRCHNEW/join.html" class="text-white button-clk">Joining Our Event Programs ?</a>
+			</h4>
+		</div>
+	</div>
+
+	<!-- //middle section -->
+
+	<!-- events -->
+	<div class="about-w3sec py-5" id="event">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title text-center mb-sm-5 mb-4">
+				<h3 class="title-w3 text-bl text-center font-weight-bold">Party Event Schedule</h3>
+				<div class="arrw">
+					<i class="fa fa-building-o" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="evnt-grid p-sm-5 p-4">
+				<div class="row">
+					<div class="col-lg-2 col-sm-3 text-center mt-2">
+						<img src="./Hostel Management System_files/e1.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-lg-7 col-sm-9 abt-block pr-lg-5 mt-sm-0 mt-4">
+						<h3 class="mb-2">Morning Sermon and Prayer</h3>
+						<p>Congue donec leo eget malesuada, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<ul class="list-unstyled mt-3">
+							<li>
+								<span class="fa fa-user-o mr-2"></span>Molive Joe
+							</li>
+							<li class="mx-md-4 mx-2">
+								<span class="fa fa-clock-o mr-2"></span>7:30 - 9:30
+							</li>
+							<li>
+								<span class="fa fa-map-marker mr-2"></span>Hall No.1
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 abt-block text-center">
+						<a href="http://localhost/SRCHNEW/join.html" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Join Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="evnt-grid p-sm-5 p-4 my-5">
+				<div class="row">
+					<div class="col-lg-2 col-sm-3 text-center mt-2">
+						<img src="./Hostel Management System_files/e2.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-lg-7 col-sm-9 abt-block pr-lg-5 mt-sm-0 mt-4">
+						<h3 class="mb-2">Candel Light​ ​Service and Singing Worship</h3>
+						<p>Congue donec leo eget malesuada, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<ul class="list-unstyled mt-3">
+							<li>
+								<span class="fa fa-user-o mr-2"></span>Molive Joe
+							</li>
+							<li class="mx-md-4 mx-2">
+								<span class="fa fa-clock-o mr-2"></span>7:30 - 9:30
+							</li>
+							<li>
+								<span class="fa fa-map-marker mr-2"></span>Hall No.1
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 abt-block text-center">
+						<a href="http://localhost/SRCHNEW/join.html" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Join Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="evnt-grid p-sm-5 p-4">
+				<div class="row">
+					<div class="col-lg-2 col-sm-3 text-center mt-2">
+						<img src="./Hostel Management System_files/e3.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-lg-7 col-sm-9 abt-block pr-lg-5 mt-sm-0 mt-4">
+						<h3 class="mb-2">Mid Night Service and New Year Wishes</h3>
+						<p>Congue donec leo eget malesuada, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<ul class="list-unstyled mt-3">
+							<li>
+								<span class="fa fa-user-o mr-2"></span>Molive Joe
+							</li>
+							<li class="mx-md-4 mx-2">
+								<span class="fa fa-clock-o mr-2"></span>7:30 - 9:30
+							</li>
+							<li>
+								<span class="fa fa-map-marker mr-2"></span>Hall No.1
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 abt-block text-center">
+						<a href="http://localhost/SRCHNEW/join.html" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Join Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //events -->
+
+	<!-- testimonials -->
+	<div class="testimonials text-center py-5" id="testi">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title mb-sm-5 mb-4">
+				<h3 class="title-w3 text-wh text-center font-weight-bold">What Our People Say</h3>
+				<img src="./Hostel Management System_files/tiw.png" alt="" class="img-fluid">
+			</div>
+			<div class="row pt-4 my-md-4">
+				<div class="col-lg-4 testi-sections">
+					<div class="testimonials_grid p-sm-5 p-4">
+						<p class="sub-test"><span class="fa fa-quote-left mr-2" aria-hidden="true"></span> Nam libero tempore, cum soluta
+							nobis est eligendi optio cumque nihil impedit.
+						</p>
+						<div class="row mt-4">
+							<div class="col-5 testi-img-res text-right">
+								<img src="./Hostel Management System_files/te1.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="col-7 testi_grid text-left mt-xl-3 mt-lg-2 mt-4">
+								<h5 class="mb-1">Petey Cruis</h5>
+								<p>Sub heading</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 testi-sections my-lg-0 my-4">
+					<div class="testimonials_grid p-sm-5 p-4">
+						<p class="sub-test"><span class="fa fa-quote-left mr-2" aria-hidden="true"></span> Nam libero tempore, cum soluta
+							nobis est eligendi optio cumque nihil impedit.
+						</p>
+						<div class="row mt-4">
+							<div class="col-5 testi-img-res text-right">
+								<img src="./Hostel Management System_files/te2.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="col-7 testi_grid text-left mt-xl-3 mt-lg-2 mt-4">
+								<h5 class="mb-1">Molive Joe</h5>
+								<p>Sub heading</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 testi-sections">
+					<div class="testimonials_grid p-sm-5 p-4">
+						<p class="sub-test"><span class="fa fa-quote-left mr-2" aria-hidden="true"></span> Nam libero tempore, cum soluta
+							nobis est eligendi optio cumque nihil impedit.
+						</p>
+						<div class="row mt-4">
+							<div class="col-5 testi-img-res text-right">
+								<img src="./Hostel Management System_files/te3.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="col-7 testi_grid text-left mt-xl-3 mt-lg-2 mt-4">
+								<h5 class="mb-1">Paige Turner</h5>
+								<p>Sub heading</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //testimonials -->
+
+
+	<!-- footer -->
+	<footer class="footer py-sm-5 py-4 text-center">
+		<div class="container py-xl-4 py-lg-3">
+			<!-- logo -->
+			<!-- //logo -->
+			<div class="footer-ex my-5">
+				<h3 class="footer-tha"> IIITDMK Online Hostel Portal </h3>
+				<img src="./Hostel Management System_files/img5.png" alt="" class="img-fluid">
+			</div>
+		</div>
+		<div class="footer-pos">
+			<img src="./Hostel Management System_files/gift.png" alt="" class="img-fluid">
+		</div>
+		<div class="footer-pos-2">
+			<img src="./Hostel Management System_files/gift2.png" alt="" class="img-fluid">
+		</div>
+	</footer>
+	<!-- footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<p class="copy-right-grids text-li text-center py-sm-4 py-3">© 2019 Hostel Management System. All Rights Reserved | Designed by Anvitha.S Smita Hegde 
+				| <a href="http://localhost/SRCHNEW/emplogin.php">Employee Login</a>
+				</p>
+		<a href="http://localhost/SRCHNEW/index.php#home" class="move-top text-center"><span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a>
+	</div>
+	<!-- //copyright -->
+
+
+
+</div></body></html>
