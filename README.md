@@ -54,15 +54,15 @@ A comprehensive web-based hostel management solution that handles student billin
 ## System Screenshots 📸
 
 ### Dashboard
-![Dashboard](![homepage](https://github.com/user-attachments/assets/df41bc7b-099f-4f0e-b265-af9b0f3202ac))
 
+![homepage](https://github.com/user-attachments/assets/bfb76928-4c03-4774-bd99-7e36063efcd5)
 
 ### Student Management
-![Student Management](![studentmgmt](https://github.com/user-attachments/assets/7d511d16-8d8a-4e95-9bb5-1424b3a64221))
+![Student Management](https://github.com/user-attachments/assets/7d511d16-8d8a-4e95-9bb5-1424b3a64221)
 
 
 ### Database Interface
-![Billing System](![database](https://github.com/user-attachments/assets/6ef3eb1f-30ed-4519-adff-08a66adb6fb0))
+![Billing System](https://github.com/user-attachments/assets/6ef3eb1f-30ed-4519-adff-08a66adb6fb0))
 
 
 ## User Roles and Access Levels 👥
