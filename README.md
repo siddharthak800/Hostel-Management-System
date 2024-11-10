@@ -62,7 +62,7 @@ A comprehensive web-based hostel management solution that handles student billin
 
 
 ### Database Interface
-![Billing System](https://github.com/user-attachments/assets/6ef3eb1f-30ed-4519-adff-08a66adb6fb0))
+![Billing System](https://github.com/user-attachments/assets/6ef3eb1f-30ed-4519-adff-08a66adb6fb0)
 
 
 ## User Roles and Access Levels 👥
